@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   list.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agpereir <agpereir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zaz <zaz@staff.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 11:54:31 by agpereir          #+#    #+#             */
-/*   Updated: 2023/09/11 12:05:10 by agpereir         ###   ########.fr       */
+/*   Created: 2014/02/27 13:14:10 by zaz               #+#    #+#             */
+/*   Updated: 2014/02/27 13:15:29 by zaz              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char    *ft_strcpy(char *s1, char *s2)
-{
-    int i;
+typedef struct s_list t_list;
 
-    i = 0;
-    while(*s2)
-    {
-        s1[i] = s2[i];
-        i++;
-    }
-    s1[i] = s2[i];
-    return(s2);
-}
+struct s_list
+{
+	int     data;
+	t_list  *next;
+};
