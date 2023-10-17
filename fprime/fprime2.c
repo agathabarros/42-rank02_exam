@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   alpha_mirror.c                                     :+:      :+:    :+:   */
+/*   fprime.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agathabarros <agathabarros@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 17:58:51 by agathabarro       #+#    #+#             */
-/*   Updated: 2023/10/15 12:46:32 by agathabarro      ###   ########.fr       */
+/*   Created: 2023/08/31 18:03:09 by agathabarro       #+#    #+#             */
+/*   Updated: 2023/10/13 13:17:52 by agathabarro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 int main(int ac, char **av)
 {
     int i;
-    char str;
-
-    i = 0;
+    int num;
+    
     if (ac == 2)
     {
-        while(av[1][i])
+        i = 1;
+        num = atoi(av[1]);
+        if (num == 1)
+            printf("1");
+        while (num >= ++i)
         {
-            str = av[1][i];
-            if ('A' <= av[1][i] && 'Z' >= av[1][i]) 
-                str = 'Z' - av[1][i] + 'A'; 
-            if ('a' <= av[1][i] && 'z' >= av[1][i]) 
-                str = 'z' - av[1][i] + 'a';
-            write(1, &str, 1);
-            i ++;
+            if (num % i == 0)
+            {
+                printf("%d", i);
+                if (num == i)
+                    break;
+                printf("*");
+                num /= i;
+                i = 1;
+            }
         }
     }
-    write(1, "\n", 1);
-    return(0);
+    printf("\n");
+	return (0);
 }

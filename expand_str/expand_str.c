@@ -6,7 +6,7 @@
 /*   By: agathabarros <agathabarros@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 18:30:00 by agathabarro       #+#    #+#             */
-/*   Updated: 2023/09/07 18:40:22 by agathabarro      ###   ########.fr       */
+/*   Updated: 2023/09/25 21:12:35 by agathabarro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,5 @@ int main(int ac, char **av)
             i++;
         }
     }
+    write(1, "\n", 1);
 }
