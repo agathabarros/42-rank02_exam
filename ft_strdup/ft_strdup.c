@@ -6,12 +6,14 @@
 /*   By: agathabarros <agathabarros@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 07:00:26 by agathabarro       #+#    #+#             */
-/*   Updated: 2023/09/01 07:07:17 by agathabarro      ###   ########.fr       */
+/*   Updated: 2023/10/22 08:50:37 by agathabarro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
+/*strdup is a function that returns a pointer to a new string which is a duplicate of the string s. 
+Memory for the new string is obtained with malloc, and can be freed with free.*/
 char    *ft_strdup(char *src)
 {
     int i = 0;
