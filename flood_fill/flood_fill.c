@@ -22,3 +22,7 @@ void  flood_fill(char **tab, t_point size, t_point begin)
 
 	fill(tab, size, begin, to_fill, c);
 }
+int main(void)
+{
+	
+}

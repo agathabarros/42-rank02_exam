@@ -6,31 +6,26 @@
 /*   By: agathabarros <agathabarros@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 14:43:11 by agathabarro       #+#    #+#             */
-/*   Updated: 2023/09/07 14:53:01 by agathabarro      ###   ########.fr       */
+/*   Updated: 2023/10/22 16:54:35 by agathabarro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
-
-int main(int ac, char**av)
+int pgcd(int a, int b)
 {
-    int n1;
-    int n2;
-
-    if(ac == 3)
-    {
-        if((n1 = atoi(av[1])) > 0 && (n2 = atoi(av[2])) > 0)
-        {
-            while (n1 != n2)
-            {
-                if(n1 > n2)
-                    n1 = n1 - n2;
-                else
-                    n2 = n2 - n1;
-            }
-            printf("%d", n1); 
-        }
-    }
-    printf("\n");
+    if(b == 0)
+        return(a);
+    else    
+        return(pgcd(b, a %b));
+}
+int	main(int ac, char **av)
+{
+	if (ac == 3)
+	{
+		int a = atoi(av[1]);
+		int b = atoi(av[2]);
+		if (a >= 0 && b >= 0)
+			printf("%d", pgcd(a, b));
+	}
+	printf("\n");
 }
