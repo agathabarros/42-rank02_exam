@@ -20,6 +20,5 @@ int main(void)
     list = ft_create_elem(str1);
     ft_list_push_front(&list, str2);
     ft_list_push_front(&list, str3);
-    ft_list_foreach(list, &ft_putstr);
     return (0);
 }

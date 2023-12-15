@@ -36,7 +36,7 @@ int is_prime(long n) // check if a number is prime
 }
 void putnbr(long n)
 {
-    if(n<0)
+    if(n < 0)
     {
         ft_putchar('-');
         n= -n;

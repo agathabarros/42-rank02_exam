@@ -6,7 +6,7 @@
 /*   By: agathabarros <agathabarros@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 18:21:40 by agathabarro       #+#    #+#             */
-/*   Updated: 2023/09/06 18:36:51 by agathabarro      ###   ########.fr       */
+/*   Updated: 2023/12/14 20:00:25 by agathabarro      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,17 @@ int		main(int ac, char **av)
     
     i = 0;
     if (ac == 2)
+	{
 		while(av[1][i])
 		{
-			if(av[1][i] >= 32 && av[1][i] <= 90)
+			if(av[1][i] >= 32 && av[1][i] <= 90) // 
 			{
-				av[1][i] = av[1][i] + 32;
+				av[1][i] += 32;
 				write (1, "_", 1);
 			}
 			write(1, &av[1][i], 1);
 			i++;
 		}
+	}
 	write(1, "\n", 1);
 }
