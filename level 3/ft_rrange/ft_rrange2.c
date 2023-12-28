@@ -20,7 +20,7 @@ int *ft_rrange(int start, int end)
         if(end >= start)
             range[i] = end - i;
         else if (end < start)
-            range[i] = start + i ;
+            range[i] = end + i ;
         i++;
     }
     return(range);
